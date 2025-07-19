@@ -1,53 +1,72 @@
-# 🛍️ Globazon – E-commerce Frontend Project
+🛒 Globazon
+Globazon is a simple e-commerce web app that lets users browse products, add them to the cart, choose delivery options, view an order summary, and simulate placing an order — just like Amazon, but global & simple!
 
-Globazon is a front-end-only e-commerce website modeled after Amazon. It features a product listing page, order tracking, and a checkout process — all built using HTML, CSS, and JavaScript.
+📁 Project Structure
 
-## 📁 Project Structure
+globazon/
+│
+├── data/                  # Static data for products, cart, and delivery options
+│   ├── cart.js
+│   ├── products.js
+│   ├── deliveryOptions.js
+│   ├── orders.js
+│
+├── scripts/               # App logic split by page
+│   ├── checkout/          # Logic for the checkout page
+│       ├── orderSummary.js
+│       └── paymentSummary.js
+│   ├── utils/             # Utility functions
+│       └── money.js
+│   └── checkout.js        # Entry point for checkout logic
+│
+├── styles/                # CSS styles
+│   ├── shared/
+│   └── pages/
+│
+├── images/                # Product and icon images
+│
+├── orders.html            # Displays user order history
+├── checkout.html          # Checkout page
+├── tracking.html          # Package tracking simulation
+🚀 Features
+🛍️ Checkout Page
+Displays all items in the cart.
 
-globazon_project/
-├── globazon.html # Homepage with product listings
-├── orders.html # User's past orders
-├── styles/ # CSS files (not included here)
-├── scripts/ # JS files (products, cart, etc.)
-├── images/ # Logos, icons, and product images
-└── README.md # Project description
+Shows product image, price, quantity, and delivery options.
 
-markdown
-Copy
-Edit
+Allows quantity update and item removal.
 
-## 💡 Features
+Users can select from multiple delivery speeds.
 
-- Responsive navigation header (logo, search bar, cart, orders)
-- Dynamic product grid with add-to-cart buttons
-- Order history page with "Buy Again" and "Track Package" options
-- Mobile-friendly layout using media queries
+💳 Payment Summary
+Calculates total price, shipping, tax (10%), and final total.
 
-## 🛠️ Technologies Used
+A "Place Order" button sends cart details to a mock API and redirects to the orders page.
 
-- **HTML5** – semantic structure
-- **CSS3** – Flexbox, Grid, media queries
-- **JavaScript (ES6)** – DOM manipulation
-- **Modular JS** – `products.js`, `cart.js`, `globazon.js`
+📦 Orders Page
+Displays recent orders with delivery dates and options to:
 
-## ✅ To Run
+Track package
 
-1. Clone or download this repository.
-2. Open `globazon.html` in your browser.
-3. Ensure the folder structure is intact (images, CSS, JS).
-4. No backend or server needed.
+Buy item again
 
-## 🚧 Upcoming Improvements
+🧪 Technologies Used
+HTML & CSS
 
-- Add localStorage for cart persistence
-- Add checkout form validation
-- Integrate a backend (Node/Express or Firebase)
-- Add product filters and search functionality
+Vanilla JavaScript
 
-## 👨‍💻 Author
+Day.js for date formatting
 
-**Victory Mwendwa**  
-GitHub: [@Vickie005](https://github.com/Vickie005)  
-LinkedIn: [Victory Mwendwa](https://linkedin.com/in/victory-mwendwa)
+API for order simulation
 
----
+📌 How to Use
+Clone or download this repository.
+
+Open checkout.html in a browser to start shopping.
+
+Add items to your cart.
+
+Select delivery options and place the order.
+
+View order history on orders.html.
+
